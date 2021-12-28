@@ -13,6 +13,7 @@
         table{
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
         td, th{
             border: 1px solid black;
@@ -23,19 +24,29 @@
             font-size: 1.5em;
             font-weight: bold;
             padding: 10px;
-            background-color: aliceblue;
+            background-color: rgb(125, 193, 251);
         }
         thead, tfoot{
             background-color:rgba(128, 128, 128, 0.568);
-            color:white;
+            color:rgba(255, 255, 255, 0.219);
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: 0;
+            background-color:rgba(0, 0, 0, 0.13);
+            color: black;
         }
          td.num{
             text-align: right; 
          }
+         tbody tr:nth-child(odd) {
+             background-color: lightgray;
+         }
     </style>
 </head>
 <body>
-    <h1>uso de tabelas grandes</h1>
+    <h3>Uso de Tabelas Grandes</h3>
     <!--
         ANATOMIA PARA TABELAS GRANDES
         caption
@@ -48,7 +59,7 @@
               TR, TD, TH
     -->
     <table>
-        <caption>População das unidades Fedetarivas</caption>
+        <caption>População das Unidades Fedetarivas</caption>
         <thead>
              <tr>
                  <th scope="col">Estado</th>
@@ -200,5 +211,6 @@
 
         </tfoot>
     </table>
+    
 </body>
 </html>
